@@ -41,9 +41,7 @@ public class StudentHandler {
     // logging
     log.info("Lombok logger get students");
 
-    return ServerResponse.ok().body(transformer.transform(studentService.getAllStudents(
-            request.queryParam("page" ), request.queryParam("size")
-            ),
+    return ServerResponse.ok().body(transformer.transform(studentService.getAllStudents(),
             new StudentTransformer()), Map.class);
   }
 

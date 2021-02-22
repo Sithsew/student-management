@@ -2,17 +2,11 @@ package studentmanagement.domain.services;
 
 import lk.dialog.dds.common.exception.types.domain.DomainException;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import studentmanagement.domain.boundary.repositories.StudentRepositoryInterface;
 import studentmanagement.domain.entities.Student;
-
-import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -29,22 +23,12 @@ public class StudentService {
   /**
    * Get a Flux of Students
    *
-   * @return Page<Student>
-   * @param size
-   * @param page
+   * @return Flux<Student>
+   *
    */
-  public Flux<Student> getAllStudents(Optional<String> page, Optional<String> size) {
-    Integer pageNumber = page.isPresent() ? Integer.parseInt(page.get()): 1;
-    Integer pageSize = size.isPresent() ? Integer.parseInt(size.get()): 10;
-    Pageable paging = PageRequest.of(pageNumber- 1, pageSize);
-    System.out.println("+++++++++++++++++++++++++++++++++++++ 2 StudentService");
+  public Flux<Student> getAllStudents() {
     return this.studentRepositoryInterface.findAll();
   }
-
-//  public Page<Student> getAllStudents(Integer page, Integer size) {
-//    Pageable paging = PageRequest.of(page - 1, size, Sort.by("createdAt").descending());
-//    return this.studentRepository.findAll(paging);
-//  }
 
 
   /**
