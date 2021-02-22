@@ -14,7 +14,6 @@ public interface StudentRepositoryInterface {
      * @return a flux of Student objects
      */
     Flux<Student> findAll();
-//    Flux<Student> findAll(Pageable page);
 
     /**
      * Save Student Detail

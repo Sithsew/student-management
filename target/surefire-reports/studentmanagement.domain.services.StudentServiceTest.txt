@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: studentmanagement.domain.services.StudentServiceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 36.569 s <<< FAILURE! - in studentmanagement.domain.services.StudentServiceTest
+deleteStudent(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+addLanguageDuplicateKey(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+editLanguageNotFoundId(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+editStudent(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+addStudent(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+deleteStudentNotFoundId(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+
+getStudentById(studentmanagement.domain.services.StudentServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property findAll found for type Student!
+

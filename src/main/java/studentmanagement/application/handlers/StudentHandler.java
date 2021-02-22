@@ -10,7 +10,6 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 import studentmanagement.application.transport.request.entities.StudentRequestEntity;
-import studentmanagement.application.transport.response.transformers.ResourceIdentifierTransformer;
 import studentmanagement.application.transport.response.transformers.StudentTransformer;
 import studentmanagement.domain.entities.Student;
 import studentmanagement.domain.services.StudentService;

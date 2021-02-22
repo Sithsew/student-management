@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: studentmanagement.externals.repositories.StudentRepositoryImplementationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in studentmanagement.externals.repositories.StudentRepositoryImplementationTest
+save(studentmanagement.externals.repositories.StudentRepositoryImplementationTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+expectation failed (failed running expectation on signal [onNext(Student [id=null, firstName=null, lastName=null, age=null, grade=null, email=null])] with [java.lang.NullPointerException]:
+)
+	at studentmanagement.externals.repositories.StudentRepositoryImplementationTest.save(StudentRepositoryImplementationTest.java:83)
+

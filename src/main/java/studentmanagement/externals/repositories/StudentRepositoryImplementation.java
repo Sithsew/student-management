@@ -2,7 +2,9 @@ package studentmanagement.externals.repositories;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -18,8 +20,9 @@ public class StudentRepositoryImplementation implements StudentRepositoryInterfa
 
     @Override
     public Flux<Student> findAll() {
-        System.out.println("+++++++++++++++++++++++++++++++++++++ 1 StudentRepositoryImplementation");
-//        System.out.println(page);
+//       System.out.println("+++++++++++++++++++++++++++++++++++++ 1 StudentRepositoryImplementation");
+//       System.out.println(page);
+//        Pageable paging = PageRequest.of( 1, 2);
         return studentRepository.findAll();
     }
 
