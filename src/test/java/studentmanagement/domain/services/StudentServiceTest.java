@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 import studentmanagement.domain.boundary.repositories.StudentRepositoryInterface;
@@ -29,29 +30,29 @@ public class StudentServiceTest {
     @MockBean
     private StudentRepositoryInterface studentRepositoryInterface;
 
-//    @Test
-//    public void getAllStudents() {
-//
-//        Student student = new Student();
-//        student.setFirstName("firstname");
-//        student.setLastName("lastname");
-//        student.setEmail("example@mail.com");
-//        student.setAge(12.0);
-//        student.setGrade(5);
-//
-//
-//        List<Student> studentList = new ArrayList<>();
-//        studentList.add(student);
-//
-//        Mockito.when(studentRepositoryInterface.findAll()).thenReturn(Flux.fromIterable(studentList));
-//
-//        Flux<Student> allStudents = studentService.getAllStudents(null,null);
-//
-//        StepVerifier.create(allStudents)
-//                .expectNextMatches(students -> students.getFirstName().equals("firstname"))
-//                .expectComplete()
-//                .verify();
-//    }
+    @Test
+    public void getAllStudents() {
+
+        Student student = new Student();
+        student.setFirstName("firstname");
+        student.setLastName("lastname");
+        student.setEmail("example@mail.com");
+        student.setAge(12.0);
+        student.setGrade(5);
+
+
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(student);
+
+        Mockito.when(studentRepositoryInterface.findAll()).thenReturn(Flux.fromIterable(studentList));
+
+        Flux<Student> allStudents = studentService.getAllStudents();
+
+        StepVerifier.create(allStudents)
+                .expectNextMatches(students -> students.getFirstName().equals("firstname"))
+                .expectComplete()
+                .verify();
+    }
 
     @Test
     public void addStudent() {

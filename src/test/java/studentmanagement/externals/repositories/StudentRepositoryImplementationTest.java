@@ -36,29 +36,29 @@ public class StudentRepositoryImplementationTest {
     private StudentRepositoryImplementation studentRepositoryImplementation;
 
 
-//    @Test
-//    public void findAll() {
-//
-//        Student student = new Student();
-////        student.setId("5fb4e4e6ac99505a59f634f3");
-//        student.setFirstName("firstname");
-//        student.setLastName("lastname");
-//        student.setEmail("example@mail.com");
-//        student.setAge(12.0);
-//        student.setGrade(5);
-//
-//        List<Student> studentList = new ArrayList<>();
-//        studentList.add(student);
-//
-//        Mockito.when(studentRepository.findAll()).thenReturn(Flux.fromIterable(studentList));
-//
-//        Flux<Student> all = studentRepositoryImplementation.findAll();
-//
-//        StepVerifier.create(all)
-//                .expectNextMatches(allStudents -> allStudents.getFirstName().equals("firstname"))
-//                .expectComplete()
-//                .verify();
-//    }
+    @Test
+    public void findAll() {
+
+        Student student = new Student();
+//        student.setId("5fb4e4e6ac99505a59f634f3");
+        student.setFirstName("firstname");
+        student.setLastName("lastname");
+        student.setEmail("example@mail.com");
+        student.setAge(12.0);
+        student.setGrade(5);
+
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(student);
+
+        Mockito.when(studentRepository.findAll()).thenReturn(Flux.fromIterable(studentList));
+
+        Flux<Student> all = studentRepositoryImplementation.findAll();
+
+        StepVerifier.create(all)
+                .expectNextMatches(allStudents -> allStudents.getFirstName().equals("firstname"))
+                .expectComplete()
+                .verify();
+    }
 
     @Test
     public void save() {
